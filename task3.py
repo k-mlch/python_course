@@ -28,7 +28,7 @@ last_words = re.findall(pattern_last_words, text)
 sentence_from_last_words = ' '.join(last_words).capitalize() + '.' #generate sentence out of last words
 
 #insert sentence with last words into our text
-updated_text = normalized_text.replace('the end of this paragraph.',
+normalized_text = normalized_text.replace('the end of this paragraph.',
                                    'the end of this paragraph. ' + sentence_from_last_words)
 
 #correct 'iz' to 'is'
