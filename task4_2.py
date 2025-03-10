@@ -54,14 +54,15 @@ def generate_final_dictionary(common_dict, key_count):
     return final_common_dict
 
 
-list_of_dicts = generate_random_dicts()
-print("Original dict: ")
-pprint(list_of_dicts)
+if __name__ == "__main__":
+    list_of_dicts = generate_random_dicts()
+    print("Original dict: ")
+    pprint(list_of_dicts)
 
-data_about_values = collect_data_about_values(list_of_dicts)
-common_dict = data_about_values[0]
-key_count = data_about_values[1]
-final_dict = generate_final_dictionary(common_dict, key_count)
+    data_about_values = collect_data_about_values(list_of_dicts)
+    common_dict = data_about_values[0]
+    key_count = data_about_values[1]
+    final_dict = generate_final_dictionary(common_dict, key_count)
 
-print("Generated final dict:")
-pprint(final_dict)
+    print("Generated final dict:")
+    pprint(final_dict)
