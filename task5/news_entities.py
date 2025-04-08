@@ -1,5 +1,7 @@
 from datetime import datetime
 import random
+from letter_counter_csv import LetterCounter
+from word_counter_csv import WordCounter
 
 class News:
     def __init__(self, news_text, city):
@@ -11,6 +13,8 @@ class News:
         with open("news.txt", "a", encoding="utf-8") as file:
             file.write(f"News:\n{self.news_text}\n\n{self.city}, {self.date}\n\n{'-'*40}\n\n")
         print("Completed. News added to the output file.")
+        LetterCounter.process_file()
+        WordCounter.process_file()
 
 class PrivateAd:
     def __init__(self, ad_text, expiration_date):
@@ -28,6 +32,8 @@ class PrivateAd:
             file.write(
                 f"Private Ad:\n{self.ad_text}\n\nExpires on: {self.expiration_date.strftime('%Y-%m-%d')}\nDays left: {self.calculate_days_left()}\n\n{'-' * 40}\n\n")
         print("Completed. Ad published.")
+        LetterCounter.process_file()
+        WordCounter.process_file()
 
 class QuoteOfTheDay:
     def __init__(self, quote, author):
@@ -41,3 +47,5 @@ class QuoteOfTheDay:
         with open("news.txt", "a", encoding="utf-8") as file:
             file.write(f"Motivational Quote:\n'{self.quote}'\n\nAuthor: {self.author}\n\nRating: {self.generate_rating()}/10\n\n{'-'*40}\n\n")
         print("Completed. Quote of the day published.")
+        LetterCounter.process_file()
+        WordCounter.process_file()

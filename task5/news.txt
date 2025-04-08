@@ -1,42 +1,55 @@
-
-
-News:
-Tech Innovations – Companies roll out new AI products, changing the landscape of technology.
-
-San Francisco, 2025-04-02 00:45:20
-
-----------------------------------------
-
 Private Ad:
-Summer Sale! Enjoy 30% OFF on all clothing
+Hurry, sale ends soon! shop now!
 
-Expires on: 2025-06-30
-Days left: 88
-
-----------------------------------------
-
-Motivational Quote:
-'The only way to do great work is to love what you do.'
-
-Author: Steve Jobs
-
-Rating: 4/10
-
-----------------------------------------
-
-Motivational Quote:
-'Success is not final, failure is not fatal'
-
-Author: Winston Churchill
-
-Rating: 1/10
+Expires on: 2028-05-19
+Days left: 1136
 
 ----------------------------------------
 
 News:
 Stock market update – markets show mixed reactions as global economies navigate inflation concerns.
 
-Washington, D.C, 2025-04-02 01:10:37
+Charlotte, 2025-04-08 03:21:33
+
+----------------------------------------
+
+Motivational Quote:
+'Two things are infinite'
+
+Author: Albert Einstein
+
+Rating: 2/10
+
+----------------------------------------
+
+Private Ad:
+TEST
+
+Expires on: 2028-01-01
+Days left: 997
+
+----------------------------------------
+
+News:
+QQQQ
+
+Quebec, 2025-04-08 03:23:11
+
+----------------------------------------
+
+News:
+Penelope
+
+Limassol, 2025-04-08 03:24:22
+
+----------------------------------------
+
+Motivational Quote:
+'TEST quote'
+
+Author: Anonymous Anonymous
+
+Rating: 6/10
 
 ----------------------------------------
 

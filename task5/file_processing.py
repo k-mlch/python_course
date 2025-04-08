@@ -1,6 +1,8 @@
 import os
 import task4_3
 from news_entities import News, PrivateAd, QuoteOfTheDay
+from letter_counter_csv import LetterCounter
+from word_counter_csv import WordCounter
 
 
 class FileProcessor:
