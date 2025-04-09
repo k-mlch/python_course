@@ -53,3 +53,43 @@ Rating: 6/10
 
 ----------------------------------------
 
+News:
+Weather is great today!
+
+New York, 2025-04-10 00:23:51
+
+----------------------------------------
+
+Private Ad:
+Bike for sale
+
+Expires on: 2025-05-01
+Days left: 20
+
+----------------------------------------
+
+Motivational Quote:
+'Keep moving forward'
+
+Author: Walt Disney
+
+Rating: 5/10
+
+----------------------------------------
+
+News:
+Weather is great today! update
+
+New York, 2025-04-10 00:49:59
+
+----------------------------------------
+
+Motivational Quote:
+'Keep moving forward update'
+
+Author: Walt Disney
+
+Rating: 4/10
+
+----------------------------------------
+

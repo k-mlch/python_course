@@ -1,0 +1,17 @@
+[
+  {
+    "type": "News",
+    "text": "Weather is great today!",
+    "additional": "New York"
+  },
+  {
+    "type": "PrivateAd",
+    "text": "Bike for sale",
+    "additional": "2025-05-01"
+  },
+  {
+    "type": "MotivationalQuote",
+    "text": "Keep moving forward",
+    "additional": "Walt Disney"
+  }
+]

@@ -1,5 +1,6 @@
 from news_entities import News, PrivateAd, QuoteOfTheDay
 from file_processing import FileProcessor
+from json_processing import JSONFileProcessor
 
 class NewsFeedManager:
     def __init__(self):
@@ -28,6 +29,11 @@ class NewsFeedManager:
         processor = FileProcessor(file_path if file_path else "new_records.txt")
         processor.process_file()
 
+    def process_file_json(self):
+        file_path = input("Enter json file path (or press Enter for default): ").strip()
+        processor = JSONFileProcessor(file_path if file_path else "new_records.json")
+        processor.process_file()
+
     def run(self):
         while True:
             print("\nSelect an option:")
@@ -35,7 +41,8 @@ class NewsFeedManager:
             print("2. Add Private Ad")
             print("3. Add Quote")
             print("4. Process Records from '.txt' File")
-            print("5. Exit \n")
+            print("5. Process Records from '.json' File")
+            print("6. Exit \n")
 
             option = input("Enter your option: ")
 
@@ -48,6 +55,8 @@ class NewsFeedManager:
             elif option == "4":
                 self.process_file()
             elif option == "5":
+                self.process_file_json()
+            elif option == "6":
                 print("Exiting the News Manager.")
                 break
             else:
