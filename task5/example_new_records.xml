@@ -1,0 +1,12 @@
+<records>
+    <record>
+        <type>News</type>
+        <text>Something important happened XML</text>
+        <additional>New York</additional>
+    </record>
+    <record>
+        <type>MotivationalQuote</type>
+        <text>Believe in yourself XML</text>
+        <additional>Anonymous</additional>
+    </record>
+</records>

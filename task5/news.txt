@@ -93,3 +93,26 @@ Rating: 4/10
 
 ----------------------------------------
 
+News:
+Something important happened xml
+
+New York, 2025-04-10 02:04:24
+
+----------------------------------------
+
+Motivational Quote:
+'Believe in yourself xml'
+
+Author: Anonymous
+
+Rating: 9/10
+
+----------------------------------------
+
+News:
+Sale sale sale sale
+
+New Orlean, 2025-04-10 02:07:51
+
+----------------------------------------
+
