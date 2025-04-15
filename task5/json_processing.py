@@ -2,6 +2,7 @@ import os
 import json
 import task4_3
 from news_entities import News, PrivateAd, QuoteOfTheDay
+from database_manager import DatabaseManager
 
 
 class JSONFileProcessor:
@@ -13,30 +14,34 @@ class JSONFileProcessor:
             print(f"File '{self.file_path}' not found.")
             return
 
+        db = DatabaseManager()
+
         try:
             with open(self.file_path, "r", encoding="utf-8") as file:
                 data = json.load(file)
 
-            #single record (dict) or multiple records (list)
             if isinstance(data, dict):
-                self.process_record(data)
+                self.process_record(data, db)
             elif isinstance(data, list):
                 for record in data:
-                    self.process_record(record)
+                    self.process_record(record, db)
             else:
                 print(f"Invalid JSON structure in file: {self.file_path}")
                 return
 
-            os.remove(self.file_path)  # Delete JSON file after processing
+            os.remove(self.file_path)
             print(f"Successfully processed and removed '{self.file_path}'.")
 
         except Exception as e:
             print(f"Error occurred while processing the JSON file: {e}")
 
-    def process_record(self, record):
+        finally:
+            db.close()
+
+    def process_record(self, record, db):
         record_type = record.get("type")
         text = record.get("text")
-        additional = record.get("additional") #field that is different for each type of news
+        additional = record.get("additional")
 
         if not all([record_type, text, additional]):
             print(f"Incomplete record: {record}")
@@ -46,15 +51,15 @@ class JSONFileProcessor:
 
         if record_type == "News":
             news = News(text_normalized, additional.strip())
-            news.publish()
+            news.publish(db)
 
         elif record_type == "PrivateAd":
             ad = PrivateAd(text_normalized, additional.strip())
-            ad.publish()
+            ad.publish(db)
 
         elif record_type == "MotivationalQuote":
             quote = QuoteOfTheDay(text_normalized, additional.strip())
-            quote.publish()
+            quote.publish(db)
 
         else:
             print(f"Unknown record type: {record_type}")
