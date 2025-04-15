@@ -2,6 +2,7 @@ from news_entities import News, PrivateAd, QuoteOfTheDay
 from file_processing import FileProcessor
 from json_processing import JSONFileProcessor
 from xml_processing import XMLFileProcessor
+from database_manager import DatabaseManager
 
 class NewsFeedManager:
     def __init__(self):
@@ -11,19 +12,28 @@ class NewsFeedManager:
         text = input("Enter news text: ")
         city = input("Enter city: ")
         news = News(text, city)
-        news.publish()
+        # Inserting both into text file and database
+        with DatabaseManager() as db:
+            news.publish(db)
+        print("News added to both file and database.")
 
     def add_private_ad(self):
         text = input("Enter ad text: ")
         expiration_date = input("Enter expiration date (YYYY-MM-DD): ")
         ad = PrivateAd(text, expiration_date)
-        ad.publish()
+        # Inserting both into text file and database
+        with DatabaseManager() as db:
+            ad.publish(db)
+        print("Private ad added to both file and database.")
 
     def add_quote(self):
         quote = input("Enter quote of the day: ")
         author = input("Enter author: ")
         quote_entry = QuoteOfTheDay(quote, author)
-        quote_entry.publish()
+        # Inserting both into text file and database
+        with DatabaseManager() as db:
+            quote_entry.publish(db)
+        print("Quote of the day added to both file and database.")
 
     def process_file(self):
         file_path = input("Enter file path (or press Enter for default): ").strip()
